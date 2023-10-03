@@ -15,12 +15,10 @@ const HomePage = () => {
 
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
-
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <h2>This is a Modal</h2>
         <p>Using React Portals with Next.js</p>
-        <button >Close Modal</button>
+        <button onClick={openModal}>Close Modal</button>
       </Modal>
     </div>
   );
