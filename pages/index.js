@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Modal from '../components/Modal';
 
 const HomePage = () => {
-  
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -19,9 +18,10 @@ const HomePage = () => {
         <h2>This is a Modal</h2>
         <p>Using React Portals with Next.js</p>
       </Modal>
-      <button onClick={openModal}>Close Modal</button>
+      <button onClick={openModal}>Open Modal</button>
     </div>
   );
 };
 
 export default HomePage;
+
