@@ -5,8 +5,7 @@ const Modal = ({ children, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <div className='modal-overlay'>
-      <div className='modal'>
+      <div className='modal' onClick={onClose}>
         <div
           style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }}
           onClick={(e) => e.stopPropagation()}//// This prevents the modal from closing when clicking inside
@@ -14,8 +13,7 @@ const Modal = ({ children, isOpen, onClose }) => {
           {children}
           <button onClick={onClose}>Close Modal</button>
         </div>
-      </div>
-    </div>,
+      </div>,
     document.body
   );
 };
