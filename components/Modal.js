@@ -8,7 +8,7 @@ const Modal = ({ children, isOpen, onClose }) => {
   return ReactDOM.createPortal(
     <div className='modal'>
       
-      <div style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }} onClick={(e) => e.stopPropagation()} >// This prevents the modal from closing when clicking inside
+      <div style={{ backgroundColor: 'white', padding: '2rem', position: 'relative' }} onClick={(e) => e.stopPropagation()} >
    //add code here
         {children}
         <button onClick={onClose}>Close Modal</button>
